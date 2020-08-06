@@ -1,6 +1,10 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+
+\graphicspath{ {./images/} }
 
 \title{Entwicklung eines IR-Spektrometers}
 \author{Noah Jutz}
@@ -42,15 +46,29 @@
 
 % 1.1.1 Was sind sie?
 Die Fraunhoferlinien, erstmals entdeckt von Joseph Fraunhofer, sind ein grundlegender Baustein in der Physik. Diese sind Absorptionslinien, welche im Sonnenspektrum beobachtet wurden.
-% TODO Bild
 
 % 1.1.2 Entdeckung Fraunhofer
-Fraunhofer dokumentierte zur Entdeckung 1814 über 570 dieser Linien sorgfältig. Mit seinen Ergebnissen konnte er hochwertige astronomische Fernrohre herstellen.
-% TODO Bild mit markierten Absorptionslinien
+Fraunhofer dokumentierte 1814 sorgfältig über 570 dieser Linien. Mit seinen Ergebnissen konnte er hochwertige astronomische Fernrohre herstellen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2000px-Fraunhofer_lines_DE.svg.png}
+    \caption{Fraunhoferlinien im Sonnenlichtspektrum}
+\end{figure}
 
 % 1.1.3 Entdeckung Bunsen, Kirchhoff
 1859 führten Gustav Robert Kirchhoff und Robert Bunsen ein Experiment durch, bei dem eine Assoziazion zwischen chemischen Elementen und den Fraunhofer'schen Linien beobachtet wurde. Daraus folgt, dass die Absorptionslinien des Sonnenspektrums, welche Fraunhofer analysierte, die Absorptionseigenschaften dieser Elemente reflektiert.
-% TODO Tabelle
+
+\begin{table}[H]
+    \centering
+    \label{tab:wichtige-fraunhoferlinien}
+    \begin{tabular}{l|l|l}
+        Name & Element & Wellenlänge \\
+        y    & $O_2$    & 898,765    \\
+        Z    & $O_2$    & 822,696   
+    \end{tabular}
+    \caption{Wichtigste Fraunhoferlinien}
+\end{table}
 
 % 1.1.4 Zusammenhang IR-Spektroskopie
 
