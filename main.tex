@@ -3,6 +3,7 @@
 \usepackage[german]{babel}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{wrapfig,lipsum,booktabs}
 
 \graphicspath{ {./images/} }
 
@@ -30,7 +31,7 @@ Als Beispiel zerlegt ein Prismenspektrometer eine Strahlquelle mit einem Prisma.
 % 1.2.1 Entdeckung Fraunhofer
 Joseph Fraunhofer entdeckte und dokumentierte 1814 sorgfältig über 570 dieser Linien (Tab. \ref{tab:wichtige-fraunhoferlinien}). Mit seinen Ergebnissen konnte er hochwertige astronomische Fernrohre herstellen.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{fraunhofer_linien.png}
     \caption{Fraunhofer'sche Linien im Sonnenlichtspektrum}
@@ -40,17 +41,18 @@ Joseph Fraunhofer entdeckte und dokumentierte 1814 sorgfältig über 570 dieser 
 % 1.2.2 Entdeckung Bunsen, Kirchhoff
 1859 führten Gustav Robert Kirchhoff und Robert Bunsen ein Experiment durch, bei dem eine Assoziazion zwischen chemischen Elementen und den Fraunhofer'schen Linien beobachtet wurde. Daraus folgt, dass die Absorptionslinien des Sonnenspektrums, welche Fraunhofer analysierte, die Absorptionseigenschaften dieser Elemente reflektieren.
 
-\begin{table}[H]
-    \centering
+\begin{wraptable}{l}{5cm}
     \label{tab:wichtige-fraunhoferlinien}
-    \begin{tabular}{l|l|l}
+    \begin{tabular}{|c|c|c|}
+        \hline
         Name & Element & Wellenlänge \\
         y    & $O_2$    & 898,765    \\
         Z    & $O_2$    & 822,696    \\
-        ...  & ...      & ... % TODO ganze tabelle
+        ...  & ...      & ...        \\ % TODO ganze tabelle
+        \hline
     \end{tabular}
     \caption{Wichtigste Fraunhofer'schen Linien}
-\end{table}
+\end{wraptable}
 
 % 1.3 IR-Spektroskopie
 % 1.3.1 Was ist es?
@@ -59,7 +61,7 @@ Bei der Infrarotspektroskopie werden Wellen im Infrarotbereich (ca. 800nm - 1mm,
 % 1.3.2 Vgl. Fraunhofer
 Genau wie bei Fraunhofers Lichtspektrometer dient die Infrarotspektroskopie dem Nachweis chemischer Stoffe. Während das Lichtspektrometer die chemische Zusammensetzung der Sterne durch die Absorption am sichtbaren Licht (Abb. \ref{fig:em-spektrum}) der dortigen Elemente nachweist, kann das Infrarotlicht eines IR-Spektrometers Schwingungen in bestimmten chemischen Gruppen anregen, und somit in gewissen Wellenlängenbereichen Absorptionen herbeirufen. 
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{em_spektrum.png}
     \caption{Elektromagnetisches Spektrum}
