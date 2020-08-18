@@ -1,0 +1,35 @@
+\documentclass[../main.tex]{subfiles}
+% 2.1.1 Was ist es?
+Der Begriff der Interferenz beschreibt das Verhalten von Wellen bei Überlagerungen.
+
+% 2.1.2 Grundsatz
+Grundsätzlich heißt es in der Physik, dass bei der Überlagerung von Wellen ihre Amplituden addiert werden. Das heißt, dass z.B. das Aufeinanderstoßen zwei gleich hoher Wellen zu einer verdoppelung der Amplitude führt.
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.3\textwidth]{interferenz.png}
+    \caption{Konstruktive (links) und Destruktive Interferenz (rechts) \cite{TODO}}
+    \label{fig:interferenz}
+\end{wrapfigure}
+% 2.1.3 Konstruktiv
+Man spricht hier also von Konstruktiver Interferenz - wenn zwei Wellen aufeinander treffen, bei welchen die Hoch- bzw. Tiefpunkte überlagern. Voraussetzung ist, dass der Gangunterschied zwei koharänter Wellen das Vielfache ihrer Wellenlänge $\lambda$ beträgt \cite{TODO}.
+\begin{equation}
+    \Delta s = m \lambda
+\end{equation}
+Das heißt, dass Wellenhochpunkt auf Wellenhochpunkt und Wellentiefpunkt auf Wellentiefpunkt treffen. Daraus folgt, dass die summierte resultierende Welle eine höhere Amplitude hat. (Abb. \ref{fig:interferenz})
+
+% 2.1.4 Destruktiv
+Im Gegenzug heißt destruktive Interferenz, dass ein Wellenhochpunkt auf einen Tiefpunkt zukommt, und eine Welle mit kleinerer Amplitude herauskommt. Dabei kann es auch zur kompletten Auslöschung der Welle kommen. Vorraussetzung ist, dass der Gangunterschied $\Delta s$ ein Vielfaches der Wellenlänge $\lambda$ ist und um $\frac{1}{2} \lambda$ verschoben ist \cite{TODO}.
+\begin{equation}
+    \Delta s = (m - \frac{1}{2}) \lambda
+\end{equation}
+Somit treffen Hochpunkte auf Tiefpunkte und umgekehrt. (Abb. \ref{fig:interferenz})
+
+% 2.1.5 Mathematische Darstellung
+Die Ausbreitung der Welle wird als Mathematische Formel normalerweise als $f(x, t)$ beschrieben, wo $x$ die Position der Welle und $t$ der Zeitpunkt der Ausbreitung ist. Somit kann die Überlagerung mehrerer Wellen $f_i(x, t)$ am Punkt $x_0$ beim Zeitpunkt $t$ als Summe der einzelnen Wellen betrachtet werden \cite{TODO}.
+\begin{equation}
+    f_{ges}(x_0, t) = \sum_{i}f_i(x_0, t)
+\end{equation}
+
+% 2.1.6 Warum Grundlage?
+Interferenz ist bei der IR-Spektroskopie ein relevanter Begriff, weil das Infrarotlicht nach dem durchdringen einer Substanz am Detektor durch die Interferenz der IR-Wellen ein bestimmtes Wellenmuster aufweist, welches am Detektor ausgemessen und zum Spektrum ausgewertet werden kann. 
