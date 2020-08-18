@@ -3,6 +3,10 @@
 *.fls
 *.pdf
 *.toc
-main.synctex.gz
-main.fdb_latexmk
+*.synctex.gz
+*.fdb_latexmk
 *_temp.tex
+*.bbl
+*.bcf
+*.blg
+*.run.xml
