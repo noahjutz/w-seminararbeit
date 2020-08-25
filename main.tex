@@ -9,6 +9,8 @@
 \usepackage{wrapfig,lipsum,booktabs}
 \usepackage{subfiles}
 \usepackage{biblatex,csquotes}
+\usepackage{fancyhdr}
+
 \addbibresource{main.bib}
 \addbibresource{images.bib}
 
@@ -18,12 +20,23 @@
 \author{Noah Jutz}
 \date{}
 
+% Page numbering
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\thepage}
+
 \begin{document}
 
 \maketitle
-\tableofcontents
+\thispagestyle{empty}
 
 \newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\pagenumbering{arabic}
 \section{Einführung}
 \subfile{sections/einfuehrung.tex}
 
