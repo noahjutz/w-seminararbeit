@@ -58,4 +58,25 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
     \end{subfigure}
     \caption{Vibrationsmuster}
 \end{figure}
-% TODO Absorptionsspektrum Wasser
+
+\begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        title={Absorption von Wasser im Infrarotbereich},
+        xlabel={Wellenlänge $\lambda$ [\SI{}{\micro\metre}]},
+        ylabel={Absorption [$m^{-1}$]},
+        xmin=700, xmax=1000,
+        ymin=1000, ymax=100000, ymode=log,
+    ]
+
+    \addplot table { % TODO real values
+            700 1000
+            750 5000
+            800 15000
+            850 20000
+            900 25000
+            950 30000
+            1000 35000
+        };
+    \end{axis}
+\end{tikzpicture}
