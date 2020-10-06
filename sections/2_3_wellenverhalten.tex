@@ -62,14 +62,14 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
 \begin{tikzpicture}
     \centering
     \begin{axis}[
-        title={Absorption von Wasser},
+        title={Molarer Absorptionsgrad von $H_2O$},
         xlabel={Wellenlänge $\lambda$ [\SI{}{\micro\metre}]},
         ylabel={Absorption [$m^{-1}$]},
-        xmin=0, xmax=7000,
+        xmin=0, xmax=5000,
         ymin=0, ymax=110
     ]
 
-    \addplot table {
+    \addplot[color=blue] table {
         5000.513224210614	0.6073903441429138
         4998.584756974298	0.6023126840591431
         4996.656289737983	0.5981195569038391
@@ -2665,8 +2665,5 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
         1.926147680658687	0.48006659746170044
 
     };
-    \legend{
-        Molarer Absorptionsgrad % EM
-    }
     \end{axis}
 \end{tikzpicture}
