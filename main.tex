@@ -45,8 +45,10 @@
     bmargin=4cm
 }
 
-% Graph compat
+% pgfplots
 \pgfplotsset{compat=1.9}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{wavy/.style={decorate, decoration=snake}}
 
 % Figure caption modifications:
 \addto\captionsgerman{\renewcommand{\figurename}{Abb.}} % Rename "Abbildung" to "Abb."
