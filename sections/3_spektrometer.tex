@@ -27,10 +27,10 @@ Das Infrarotspektrometer ist ein Werkzeug der Spektroskopie, das mithilfe der Ab
 \begin{figure}[ht]
     \centering
     \begin{tikzpicture}
-        \draw[step=1cm,gray,dotted,very thin] (-5,-3) grid (5,3);
+        \draw[step=1cm,gray,dotted,very thin] (-3,-2) grid (4,2);
         
-        \draw (3,1)[orange,thick] arc (30:-30:2cm) node[black,anchor=north] {Spiegel};
-        \fill[red] (2.5,0) circle (0.05cm) node[black,anchor=south east] {Lötkolben};
+        \draw (3,1)[orange,very thick] arc (30:-30:2cm) node[black,anchor=north] {Spiegel};
+        \fill[red] (2.5,0) circle (0.1cm) node[black,anchor=south east] {Lötkolben};
         
         % EM-Strahlungsreflektion
         \draw[gray,dashed,very thin] (2.5,0) -- (3.125,0.8);
