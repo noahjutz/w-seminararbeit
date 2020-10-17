@@ -25,14 +25,14 @@
             \clip (1,0) circle (2);
             \clip (0,-1) rectangle (3,1);
             \foreach \i in {0.3,0.6,...,2} {
-                \draw[gray,dashed,very thin] (1,0) -- (3,{\i-1.1}); % Abgegeben
-                \draw[gray,dashed,very thin] (4,{\i-1.1}) -- (0,{\i-1.1}); % Reflektiert
+                \draw[gray,dotted] (1,0) -- (3,{\i-1.1}); % Abgegeben
+                \draw[gray,dotted,thick] (4,{\i-1.1}) -- (0,{\i-1.1}); % Reflektiert
             }
         \end{scope}
         
-        \draw[blue,thick,dotted] (0,-1) -- (0,1) node[black,anchor=south] {Gitter};
+        \draw[blue,thick,dashed] (0,-1) -- (0,1) node[black,anchor=south] {Gitter};
         
-        \draw[very thick,gray,->] (-1,1) -- (-1,-1);
+        \draw[very thick,gray,dashed,->] (-1,1) -- (-1,-1);
         \fill[green] (-1,0.5) circle (0.1cm) node[black,anchor=east] {Sensor};
     \end{tikzpicture}
     \caption{Aufbau}
