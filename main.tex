@@ -48,8 +48,9 @@
 % Graph compat
 \pgfplotsset{compat=1.9}
 
-% Rename "Abbildung" to "Abb."
-\addto\captionsgerman{\renewcommand{\figurename}{Abb.}}
+% Figure caption modifications:
+\addto\captionsgerman{\renewcommand{\figurename}{Abb.}} % Rename "Abbildung" to "Abb."
+\captionsetup{justification=raggedright,singlelinecheck=false} % Left-align captions
 
 \begin{document}
 
