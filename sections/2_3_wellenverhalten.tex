@@ -21,7 +21,7 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
 % 2.2.5 Absorption
 \textbf{Absorption} beschreibt in der Physik die Aufnahme von Wellen in einer Substanz. Diese ist für die IR-Spektroskopie besonders interresant, da beim Zusammenkommen von Infrarotlicht mit einer Substanz Vibrationsmuster in den Molekülen auftreten, anhand dessen sich der Aufbau der Substanz ableiten lassen kann. Verschiedene funktionelle Gruppen in der Chemie haben nämlich bei verschiedenen Wellenlängen Absorptionseigenschaften. So treten z.B. bei Wasser ($H_2O$) Absorptionen bei \SI{2.734}{\micro\metre}, \SI{6.269}{\micro\metre} und \SI{2.662}{\micro\metre} auf. Die Vibrationsmuster sind jeweilig symmetrisches Dehnen der $OH$-Bindungen (Abb. \ref{fig:oh_symmetric_stretching}), $H-O-H$-Beugung (Abb. \ref{fig:hoh_bending}) und $OH$-asymetrisches Dehnen (Abb. \ref{fig:oh_asymmetric_stretching}).
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
         \chemfig{
@@ -61,6 +61,7 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
 
 \begin{figure}[ht]
     \caption{Molarer Absorptionsgrad von $H_2O$ bei \SI{25}{\celsius} [$\frac{L}{mol-cm}$]}
+    \label{fig:h2o_absorptionsgrad}
     \begin{tikzpicture}
         \begin{axis}[
             xlabel={Wellenzahl [$\frac{1}{cm}$]},
@@ -2156,3 +2157,5 @@ Glatte Oberflächen \textbf{reflektieren} häufig Strahlungen (z.B. Spiegel).
         \end{axis}
     \end{tikzpicture}
 \end{figure}
+
+In Abb. \ref{fig:h2o_absorptionsgrad} sind Absorptionshochpunkte bei Wellenlängen von 680$cm^{-1}$ (\SI{14.705}{\micro\metre}), 1644$cm^{-1}$ (\SI{6.082}{\micro\metre}) und 3413$cm^{-1}$ (\SI{2.929}{\micro\metre}). Die letzte dieser ist am stärksten ausgeprägt, und steht in Einklang mit den Vibrationsmustern, da es sich im Bereich des symmetrischen und asymmetrischen Dehnens (Abb. \ref{fig:oh_symmetric_stretching}, \ref{fig:oh_asymmetric_stretching}) befindet.
