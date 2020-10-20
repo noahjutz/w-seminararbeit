@@ -9,11 +9,11 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
 \begin{figure}[ht]
     \centering
     \begin{tikzpicture}
-        %\draw[step=1,gray,dotted,thin] (0,1) grid (7,7);
+        \draw[step=1,gray,dotted,thin] (1,1) grid (8,7);
         
         % Parallel Waves
-        \foreach \i in {0.5,1,...,2.5}
-            \draw[gray,dashed,thick] ({\i},2) -- ({\i},6);
+        %\foreach \i in {0.5,1,...,2.5}
+        %    \draw[gray,dashed,thick] ({\i},2) -- ({\i},6);
         
         % Double Slit @ 3 & 5
         \draw[thick] (3,1.5) -- (3,2.9);
@@ -33,16 +33,23 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
         \draw[gray,very thin,wavy] (bslit) -- (max);
         \draw[blue,thick] (bslit) -- (max);
         
-        % perpendicular
-        \draw[thick,dashed] (tslit) -- (intersect);
+        % Added guidelines
+        \draw[gray,dashed,thick] (tslit) -- (intersect);
+        \draw[gray,dashed,thick] (tslit) -- (6,5);
         
         % Labeling
         \draw (3,4.7) node[anchor=north west] {$\alpha$};
-        \draw (3.5,3.5) node[anchor=north west] {$\Delta x$};
+        \draw (3.5,3.5) node[anchor=north west] {$k \lambda$};
         \draw (6.2,6) node[anchor=west] {$k$};
 
-        \draw[thick,<->] (2.75,3) -- (2.75,5);
-        \draw (2.75,4) node[anchor=east] {$b$};
+        \draw[thick,<->] (2,3) -- (2,5);
+        \draw (2,4) node[anchor=east] {$b$};
+
+        \draw[thick,<->] (3,2) -- (6,2);
+        \draw (4.5,2) node[anchor=north] {$l$};
+
+        \draw[thick,<->] (7,4) -- (7,6);
+        \draw (7,5) node[anchor=west] {h};
         
         % Interference pattern
         \foreach \i in {1,2,...,20}
