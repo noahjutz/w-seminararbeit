@@ -3,10 +3,47 @@
 % 2.2.1 Wellenverhalten bei Substanzen
 Beim zusammenkommen einer Welle mit einer Substanz kann es zu verschiedenen Abschwächungen der Welle kommen. Es spielen Absorption, Streuung, Beugung und Reflexion (Abb. \ref{fig:extinktion_typen}) eine Rolle.
 
-% TODO alternative image (copyright..)
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.65\textwidth]{extinktion_typen.png}
+    % Reflektion
+    \begin{subfigure}[b]{0.3\textwidth}
+        \resizebox{\textwidth}{\textwidth}{%
+        \begin{tikzpicture}
+            \draw[white] (0,0) grid (2,2);
+
+            \draw[very thick,blue] (0.5,0.5) -- (1.5,1.5);
+
+            \draw (1,2) -- (1,1); % Initial
+            \draw[->] (1,1) -- (0,1); % Transmitted
+        \end{tikzpicture}
+        }
+        \caption{Reflektion am Spiegel \newline}
+    \end{subfigure}
+    % Beugung
+    \begin{subfigure}[b]{0.3\textwidth}
+        \resizebox{\textwidth}{\textwidth} {%
+        \begin{tikzpicture}
+            \draw[white] (0,0) grid (2,2);
+            \draw[very thick,blue,dashed] (0.5,1) -- (1.5,1); % Gitter
+
+            \draw (1,2) -- (1,1); % Initial
+            \draw[->] (1,1) -- (0.3,0.3); % Transmitted
+        \end{tikzpicture}
+        }
+        \caption{Beugung am Gitter\newline}
+    \end{subfigure}
+    % Absorption
+    \begin{subfigure}[b]{0.3\textwidth}
+        \resizebox{\textwidth}{\textwidth}{%
+        \begin{tikzpicture}
+            \draw[white] (0,0) grid (2,2);
+            \draw[very thick,blue] (0.5,1) -- (1.5,1);
+            \draw (1,2) -- (1,1);
+            \draw[->,dashed] (1,1) -- (1,0);
+        \end{tikzpicture}
+        }
+        \caption{Absorption an einer Substanz}
+    \end{subfigure}
     \caption{Einflussfaktoren auf Extinktion}
     \label{fig:extinktion_typen}
 \end{figure}
