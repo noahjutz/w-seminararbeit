@@ -7,10 +7,51 @@ Grundsätzlich heißt es in der Physik, dass bei der Überlagerung von Wellen ih
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{interferenz.png}
-    \caption{Konstruktive (links) und Destruktive Interferenz (rechts) \cite{TODO}}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \begin{tikzpicture}
+        \begin{axis}[
+            xmin=0,xmax=31.4,
+            ymin=-3,ymax=3,
+            ticks=none,
+            scale only axis,
+            domain=0:31.4,
+            width=\textwidth,
+        ]
+            \addplot[gray,dashed,thin]{2};
+            \addplot[samples=200,blue] {sin(deg(x))/2+2};
+            \addplot[gray,dashed,thin]{0};
+            \addplot[samples=200,blue] {sin(deg(x))/2};
+            \addplot[gray,dashed,thin]{-2};
+            \addplot[samples=200,blue,very thick] {sin(deg(x))-2};
+        \end{axis}
+        \end{tikzpicture}
+        \caption{Konstruktiv}
+    \end{subfigure}
+    \hspace{0.5cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \begin{tikzpicture}
+        \begin{axis}[
+            xmin=0,xmax=31.4,
+            ymin=-3,ymax=3,
+            ticks=none,
+            scale only axis,
+            domain=0:31.4,
+            width=\textwidth,
+        ]
+            \addplot[gray,dashed,thin]{2};
+            \addplot[samples=200,blue] {sin(deg(x+3.14))/2+2};
+            \addplot[gray,dashed,thin]{0};
+            \addplot[samples=200,blue] {sin(deg(x))/2};
+            \addplot[gray,dashed,thin]{-2};
+            \addplot[samples=200,blue,very thick] {-2};
+        \end{axis}
+        \end{tikzpicture}
+        \caption{Destruktiv}
+    \end{subfigure}
+    \caption{Interferenz}
     \label{fig:interferenz}
 \end{figure}
+
 % 2.1.3 Konstruktiv
 Man spricht hier also von Konstruktiver Interferenz - wenn zwei Wellen aufeinander treffen, bei welchen die Hoch- bzw. Tiefpunkte überlagern. Voraussetzung ist, dass der Gangunterschied zwei koharänter Wellen das Vielfache ihrer Wellenlänge $\lambda$ beträgt \cite{TODO}.
 \begin{equation}
