@@ -32,8 +32,8 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
             \draw[blue,thick] (bslit) -- (max);
             
             % Added guidelines
-            %\draw[gray,dashed,thick] (tslit) -- (intersect);
-            \draw[gray,dashed,thick] (tslit) -- (6,5);
+            \draw[gray,dashed,thick] (tslit) -- (intersect);
+            %\draw[gray,dashed,thick] (tslit) -- (6,5);
             
             % Labeling
             \draw (3,4.7) node[anchor=north west] {$\alpha$};
@@ -43,12 +43,6 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
             \draw[thick,<->] (2.5,3) -- (2.5,5);
             \draw (2.5,4) node[anchor=east] {$b$};
 
-            \draw[thick,<->] (3,2) -- (6,2);
-            \draw (4.5,2) node[anchor=north] {$l$};
-
-            \draw[thick,<->] (6.75,4) -- (6.75,6);
-            \draw (6.75,5) node[anchor=west] {$h$};
-            
             % Interference pattern
             \foreach \i in {1,2,...,20}
                 \shade[black,white,shading angle={mod(\i,20)*180}] (6,{\i/4+1.25}) rectangle (6.2,{\i/4+1.5});
@@ -87,6 +81,7 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
         \caption{Schematischer Aufbau des Versuchs zur Ermittlung von $b$}
         \label{fig:doppelspalt_beugung_berechnen}
     \end{subfigure}
+    \caption{Figuren zu $k \lambda = b \sin{\alpha}$}
 \end{figure}
 
 \begin{equation}
