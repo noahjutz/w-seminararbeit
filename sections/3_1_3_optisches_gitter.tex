@@ -1,11 +1,5 @@
 \documentclass[../main.tex]{subfiles}
 
-Das Gitter beugt die Strahlung in die verschiedenen Wellenlängen. Hierfür gibt es Gitter verschiedener Linienzahlen pro mm, oder auch Reflexionsgitter, welche sowohl beugen als auch reflektieren (Abb. \ref{fig:gitter_600l}).
-Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf Basis der Strichbreite $b$. 
-\[
-    k \lambda = b \sin{\alpha}
-\]
-
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
@@ -79,11 +73,21 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
             \draw (6.2,6) node[anchor=west] {$k$};
         \end{tikzpicture}
         \caption{Schematischer Aufbau des Versuchs zur Ermittlung von $b$}
-        \label{fig:doppelspalt_beugung_berechnen}
+        \label{fig:doppelspalt_beugung_berechnen_aufbau}
     \end{subfigure}
     \caption{Figuren zu $k \lambda = b \sin{\alpha}$}
 \end{figure}
 
+Das Gitter beugt die Strahlung in die verschiedenen Wellenlängen. Hierfür gibt es Gitter verschiedener Linienzahlen pro mm, oder auch Reflexionsgitter, welche sowohl beugen als auch reflektieren (Abb. \ref{fig:gitter_600l}).
+Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf Basis der Strichbreite $b$:
+\begin{equation}
+    k \lambda = b \sin{\alpha}
+\end{equation}
+Schreibt man diese um, so erhält man die Linienbreite $b$ des Gitters:
+\begin{equation}
+    b = \frac{k \lambda}{\sin{\alpha}}
+\end{equation}
+Der Winkel $\alpha$ lässt sich mit dem Arkustangens des Abstandes zur Wand $l$ und zum Maxima $h$ berechnen (Abb. \ref{fig:doppelspalt_beugung_berechnen_aufbau}):
 \begin{equation}
     \begin{split}
         b={}&\frac{k \lambda}{\sin{\alpha}} \\
@@ -91,6 +95,7 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
         &= \frac{k \lambda}{\sin(\arctan(\frac{l}{h}))} \\
     \end{split}
 \end{equation}
+Bei einem Abstand zur Wand von $l = 100cm$ und einem Laser mit einer Wellenlänge von $\lambda = 530nm$ ist der Abstand vom 0. zum 1. Maximum bei den Gittern von 600 und 100 Linien pro mm jeweils $h_{600} = 34cm$ und $h_{100} = 5cm$. Setzt man diese Werte in die obige Formel ein, erhält man $b_{600}$ und $b_{100}$:
 
 \begin{subequations}
     \noindent\begin{minipage}{0.5\linewidth}
@@ -112,8 +117,3 @@ Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf
       \end{align}
     \end{minipage}
 \end{subequations}
-
-
-% 600 Linien / mm
-% Leybold
-% Reflexionsgitter
