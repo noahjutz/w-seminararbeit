@@ -41,8 +41,8 @@
             \foreach \i in {1,2,...,20}
                 \shade[black,white,shading angle={mod(\i,20)*180}] (6,{\i/4+1.25}) rectangle (6.2,{\i/4+1.5});
         \end{tikzpicture}
-        \caption{Visualisierung der Formel\newline}
-        \label{fig:doppelspalt_beugung_berechnen}
+        \caption{Am Doppelspalt}
+        \label{fig:differenz_doppelspalt}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
@@ -72,10 +72,10 @@
             \draw (3.5,4) node[anchor=south west] {$\alpha$};
             \draw (6.2,6) node[anchor=west] {$k$};
         \end{tikzpicture}
-        \caption{Schematischer Aufbau des Versuchs zur Ermittlung von $b$}
-        \label{fig:doppelspalt_beugung_berechnen_aufbau}
+        \caption{Am Gitter}
+        \label{fig:differenz_gitter}
     \end{subfigure}
-    \caption{Figuren zu $k \lambda = b \sin{\alpha}$}
+    \caption{Entstehung von Differenz}
 \end{figure}
 
 Das Gitter beugt die Strahlung in die verschiedenen Wellenlängen. Hierfür gibt es Gitter verschiedener Linienzahlen pro mm, oder auch Reflexionsgitter, welche sowohl beugen als auch reflektieren (Abb. \ref{fig:gitter_600l}).
@@ -87,7 +87,7 @@ Schreibt man diese um, so erhält man die Linienbreite $b$ des Gitters:
 \begin{equation}
     b = \frac{k \lambda}{\sin{\alpha}}
 \end{equation}
-Der Winkel $\alpha$ lässt sich mit dem Arkustangens des Abstandes zur Wand $l$ und zum Maxima $h$ berechnen (Abb. \ref{fig:doppelspalt_beugung_berechnen_aufbau}):
+Der Winkel $\alpha$ lässt sich mit dem Arkustangens des Abstandes zur Wand $l$ und zum Maxima $h$ berechnen (Abb. \ref{fig:differenz_gitter}):
 \begin{equation}
     \begin{split}
         b={}&\frac{k \lambda}{\sin{\alpha}} \\
