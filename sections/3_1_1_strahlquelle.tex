@@ -4,11 +4,15 @@ Zunächst benötigen wir eine Infrarot-Strahlquelle, welche die Substanz durchdr
 \begin{equation}
     \lambda_{\text{max}} \cdot T = b
 \end{equation}
-%Setzen wir die infrarote Wellenlänge eines Lötkolbens $\lambda = \SI{10}{\micro\metre}$ und seine Temperatur $T = \SI{541.15}{\kelvin}$ ein, so erhalten wir:
-%\begin{equation}
-%    \SI{10}{\micro\metre} * \SI{541.15}{\kelvin} = \SI{5411.5}{\milli\kelvin}
-%\end{equation}
-% WRONG use @l = \frac{b}{T}
+\begin{equation}
+    \begin{split}
+        \lambda_{max}={}&\frac{b}{T} \\
+        &=\frac{2.8 \cdot 10^{-3}\text{mK}}{\SI{541}{\kelvin}} \\
+        &\approx 0.7 \cdot 10^{-5} \\
+        &\approx 7 \cdot 10^{-6} \\
+        &\approx \SI{7}{\micro\metre} \\
+    \end{split}
+\end{equation} % TODO wrong result? should be 5micrometre?
 
 
 % λ × T = b
