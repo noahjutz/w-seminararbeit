@@ -1,1 +1,16 @@
 \documentclass[../main.tex]{subfiles}
+
+Um eine möglichst genau Messung zu erheben, verwenden wir einen Arduinogesteuerten Motor, um den Sensor hin und her zu fahren. Befestigen wir den Sensor an eine lineare Schiene, welche von einem Schrittmotor gefahren wird, erhalten wir die besten Ergebnisse.
+
+Wir gehen im Programm von einem Schrittmotor mit 4 verbundenen Anschlüssen auf Pin 8, 9, 10 und 11 aus. Darüber hinaus benötigt er 200 Schritte pro Umdrehung, in denen die Schiene um \SI{20}{\milli\metre} bewegt wird. Wir wählen arbiträr eine Geschwindigkeit von 60 Umdrehungen pro Minute.
+
+\begin{figure}[ht]
+\begin{lstlisting}[language=C++]
+    const int rpm = 60;
+    const int stepsPerRevolution = 200;
+    const int measurementRange = 150;
+    const int measurementInterval = 1;
+    const int mmPerRevolution = 20;
+\end{lstlisting}
+\caption{Konstanten bzgl. Schrittmotors}
+\end{figure}
