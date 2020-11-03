@@ -25,14 +25,11 @@ Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalStep
 \begin{figure}[ht]
 \begin{lstlisting}[language=C++]
 Stepper stepper(stepsPerRevolution, 8, 9, 10, 11)
-void move() {
-    stepper.setSpeed(rpm);
+stepper.setSpeed(rpm);
 
-    int totalSteps = (measurementRange / mmPerRevolution) * stepsPerRevolution;
-    
-    stepper.step(totalSteps);
-    stepper.step(-totalSteps);
-}
+int totalSteps = (measurementRange / mmPerRevolution) * stepsPerRevolution;
+stepper.step(totalSteps);
+stepper.step(-totalSteps);
 \end{lstlisting}
 \caption{Programm zur Motorsteuerung}
 \end{figure}
