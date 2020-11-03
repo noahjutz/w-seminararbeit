@@ -13,3 +13,26 @@ const int mmPerRevolution = 20;
 \end{lstlisting}
 \caption{Konstanten bzgl. Schrittmotors}
 \end{figure}
+
+Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper Library, welche mit Angabe einer Geschwindigkeit und Schrittanzahl die richtigen Signale an die Motoranschlüsse weitergibt. Die Gesamtanzahl an Schritten berechnet sich folgendermaßen:
+
+\begin{equation}
+    \text{totalSteps} = \frac{\text{measurementRange}}{\text{mmPerRevolution}} \cdot \text{stepsPerRevolution}
+\end{equation}
+
+\begin{figure}[ht]
+\begin{lstlisting}[language=C++]
+#include <Arduino.h>
+#include <Stepper.h>
+Stepper stepper(stepsPerRevolution, 8, 9, 10, 11)
+void move() {
+    stepper.setSpeed(rpm);
+
+    int totalSteps = (measurementRange / mmPerRevolution) * stepsPerRevolution;
+    
+    stepper.step(totalSteps);
+    stepper.step(-totalSteps);
+}
+\end{lstlisting}
+\caption{Programm zur Motorsteuerung}
+\end{figure}
