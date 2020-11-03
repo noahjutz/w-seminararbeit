@@ -82,9 +82,10 @@ $600\frac{\text{Linien}}{\text{mm}}$ und $100\frac{\text{Linien}}{\text{mm}}$
 \end{figure}
 
 \noindent Folgende Formel beschreibt die position der Maxima (vielfache von $\lambda$) auf Basis der Strichbreite $b$:
-\[
+\begin{equation}
     k \lambda = b \sin{\alpha}
-\]
+    \label{eq:gittermaxima}
+\end{equation}
 Schreibt man diese um, so erhält man die Linienbreite $b$ des Gitters:
 \[
     b = \frac{k \lambda}{\sin{\alpha}}
@@ -120,4 +121,29 @@ Bei einem Abstand zur Wand von $l = 100cm$ und einem Laser mit einer Wellenläng
     \end{minipage}
 \end{subequations}
 
-\SI{11}{\micro\metre} eignen sich im Infrarotbereich sehr gut. Daher arbeiten wir mir dem Gitter mit $100 \frac{\text{Linien}}{\text{mm}}$.
+\SI{11}{\micro\metre} eignen sich im Infrarotbereich sehr gut. Daher arbeiten wir mir dem Gitter mit $100 \frac{\text{Linien}}{\text{mm}}$. Mit obiger Formel (Gl. \ref{eq:gittermaxima}) lässt sich nun auch der Winkel $\alpha$ der Maxima folgendermaßen berechnen.
+
+\[
+    \begin{split}
+        \alpha_k={}&\arctan{\frac{k \cdot \lambda}{b}} \\
+        &= \arctan{\frac{k \cdot \SI{530}{\nano\metre}}{\SI{11}{\micro\metre}}} \\
+    \end{split}
+\]
+
+\begin{subequations}
+    \noindent\begin{minipage}{0.5\linewidth}
+      \begin{align}
+            \alpha_1 = \arctan{\frac{1 \cdot \SI{530}{\nano\metre}}{\SI{11}{\micro\metre}}}
+            \approx \SI{48}{\degree}
+      \end{align}
+    \end{minipage}%
+    \begin{minipage}{0.5\linewidth}
+      \begin{align}
+          \begin{split}
+            \alpha_2 = \arctan{\frac{2 \cdot \SI{530}{\nano\metre}}{\SI{11}{\micro\metre}}}
+            \approx \SI{96}{\degree}
+          \end{split}
+      \end{align}
+    \end{minipage}
+\end{subequations}
+
