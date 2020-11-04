@@ -12,7 +12,8 @@ Führen wir das Programm aus Abb. \ref{fig:programm-signalerfassung-und-motorste
 Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphisch darstellen.
 
 \begin{figure}[ht]
-\begin{lstlisting}[language=TeX]
+    \begin{subfigure}[b]{0.5\textwidth}
+        \begin{lstlisting}[language=TeX]
 \begin{tikzpicture}
     \begin{axis}[
         xmin=0, xmax=150,
@@ -25,5 +26,26 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
         % ...
     }
 \end{tikzpicture}
-\end{lstlisting}
+        \end{lstlisting}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+        \begin{tikzpicture}
+            \begin{axis}[
+                xlabel={Messlänge [mm]},
+                ylabel={Transmission [Arbiträre Einheit]},
+                xmin=0, xmax=150,
+                ymin=0, ymax=1023,
+                width=\textwidth,
+                height=\textwidth
+            ]
+
+            \addplot[color=blue] table {
+                0   312
+                20   132
+                30   23
+                150 500
+            };
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
 \end{figure}
