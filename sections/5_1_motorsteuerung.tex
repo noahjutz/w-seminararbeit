@@ -17,7 +17,7 @@ const int mmPerRevolution = 20;     // Bewegung pro Umdrehung
 Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper Library, welche mit Angabe einer Geschwindigkeit und Schrittanzahl die richtigen Signale an die Motoranschlüsse weitergibt. Die Gesamtanzahl an Schritten berechnet sich folgendermaßen:
 
 \[
-    \text{totalSteps} = \frac{\text{measurementRange}}{\text{mmPerRevolution}} \cdot \text{stepsPerRevolution}
+    \text{steps} = \frac{\text{measurementRange}}{\text{mmPerRevolution}} \cdot \text{stepsPerRevolution}
 \]
 
 Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalSteps auf, dreht der Motor mit der vorgegebenen Geschwindigkeit die Schiene entlang. Übergeben wir den negativen Wert -totalSteps, so dreht sich der Motor in die umgekehrte Richtung, und die Schiene kehrt zurück auf den Ausgangspunkt.
@@ -27,9 +27,9 @@ Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalStep
 Stepper stepper(stepsPerRevolution, 8, 9, 10, 11)
 stepper.setSpeed(rpm);
 
-int totalSteps = (measurementRange / mmPerRevolution) * stepsPerRevolution;
-stepper.step(totalSteps);
-stepper.step(-totalSteps);
+int steps = (float(measurementRange) / mmPerRevolution) * stepsPerRevolution;
+stepper.step(steps);
+stepper.step(-steps);
 \end{lstlisting}
 \caption{Programm zur Motorsteuerung}
 \end{figure}
