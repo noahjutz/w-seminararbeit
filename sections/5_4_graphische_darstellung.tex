@@ -13,7 +13,7 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
 
 \begin{figure}[ht]
     \begin{subfigure}[b]{0.5\textwidth}
-        \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \begin{tikzpicture}
     \begin{axis}[
         xmin=0, xmax=150,
@@ -26,7 +26,7 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
         % ...
     }
 \end{tikzpicture}
-        \end{lstlisting}
+\end{lstlisting}
     \end{subfigure}
     \begin{subfigure}[b]{0.5\textwidth}
         \begin{tikzpicture}
@@ -38,14 +38,13 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
                 width=\textwidth,
                 height=\textwidth
             ]
-
-            \addplot[color=blue] table {
-                0   312
-                20   132
-                30   23
-                150 500
-            };
             \end{axis}
+            \begin{scope}[x={185},y={185}]
+                \draw (0,0) .. controls (0.15,0.25) .. (0.3,0);
+                \draw (0.3,0) .. controls (0.45,0.75) .. (0.6,0);
+                \draw (0.6,0) .. controls (0.75,0.25) .. (0.9,0);
+            \end{scope}
         \end{tikzpicture}
     \end{subfigure}
+    \caption{Graphische Darstellung der Werte mit \TeX}
 \end{figure}
