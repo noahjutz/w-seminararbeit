@@ -2,6 +2,7 @@
 *.aux
 *.fls
 *.pdf
+!0_deckblatt.pdf
 *.toc
 *.synctex.gz
 *.fdb_latexmk

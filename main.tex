@@ -20,15 +20,12 @@
 \usepackage{amsmath} % Equation placement, subequations
 \usepackage{listings} % Code
 \usepackage{xcolor} % Code
+\usepackage{pdfpages} % Deckblatt
 
 \addbibresource{main.bib}
 \addbibresource{images.bib}
 
 \graphicspath{ {./images/} }
-
-\title{Entwicklung eines IR-Spektrometers}
-\author{Noah Jutz}
-\date{}
 
 % Page numbering on top: not needed anymore
 %\renewcommand{\headrulewidth}{0pt}
@@ -84,7 +81,7 @@
 
 \begin{document}
 
-\maketitle
+\includepdf{sections/0_deckblatt.pdf}
 \thispagestyle{empty}
 
 \newpage
