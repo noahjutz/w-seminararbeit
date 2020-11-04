@@ -6,10 +6,10 @@ Wir gehen im Programm von einem Schrittmotor mit 4 verbundenen Anschlüssen auf 
 
 \begin{figure}[ht]
 \begin{lstlisting}[language=C++]
-const int rpm = 60;                 // Geschwindigkeit
-const int stepsPerRevolution = 200; // Schritte pro Umdrehung
-const int measurementRange = 150;   // Schienenlaenge
-const int mmPerRevolution = 20;     // Bewegung pro Umdrehung
+const int rpm = 60;          // Geschwindigkeit
+const int stepsPerRev = 200; // Schritte pro Umdrehung
+const int range = 150;       // Schienenlaenge
+const int mmPerRev = 20;     // Bewegung pro Umdrehung
 \end{lstlisting}
 \caption{Konstanten bzgl. Schrittmotors}
 \end{figure}
@@ -17,7 +17,7 @@ const int mmPerRevolution = 20;     // Bewegung pro Umdrehung
 Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper Library, welche mit Angabe einer Geschwindigkeit und Schrittanzahl die richtigen Signale an die Motoranschlüsse weitergibt. Die Gesamtanzahl an Schritten berechnet sich folgendermaßen:
 
 \[
-    \text{steps} = \frac{\text{measurementRange}}{\text{mmPerRevolution}} \cdot \text{stepsPerRevolution}
+    \text{steps} = \frac{\text{range}}{\text{mmPerRev}} \cdot \text{stepsPerRev}
 \]
 
 Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalSteps auf, dreht der Motor mit der vorgegebenen Geschwindigkeit die Schiene entlang. Übergeben wir den negativen Wert -totalSteps, so dreht sich der Motor in die umgekehrte Richtung, und die Schiene kehrt zurück auf den Ausgangspunkt.
@@ -27,7 +27,7 @@ Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalStep
 Stepper stepper(stepsPerRevolution, 8, 9, 10, 11)
 stepper.setSpeed(rpm);
 
-int steps = (float(measurementRange) / mmPerRevolution) * stepsPerRevolution;
+int steps = (float(range) / mmPerRev) * stepsPerRev;
 stepper.step(steps);
 stepper.step(-steps);
 \end{lstlisting}
