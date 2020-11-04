@@ -20,7 +20,7 @@ Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper 
     \text{steps} = \frac{\text{range}}{\text{rangePerRev}} \cdot \text{stepsPerRev}
 \]
 
-Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit totalSteps auf, dreht der Motor mit der vorgegebenen Geschwindigkeit die Schiene entlang. Übergeben wir den negativen Wert -totalSteps, so dreht sich der Motor in die umgekehrte Richtung, und die Schiene kehrt zurück auf den Ausgangspunkt.
+Rufen wir nun die \verb|step| Funktion der Arduino Stepper Library mit \verb|steps| auf, dreht der Motor mit der vorgegebenen Geschwindigkeit die Schiene entlang. Übergeben wir den negativen Wert \verb|-steps|, so dreht sich der Motor in die umgekehrte Richtung, und die Schiene kehrt zurück auf den Ausgangspunkt.
 
 \begin{figure}[ht]
 \begin{lstlisting}[language=C++]
