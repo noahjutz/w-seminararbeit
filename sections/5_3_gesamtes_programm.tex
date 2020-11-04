@@ -1,9 +1,14 @@
 \documentclass[../main.tex]{subfiles}
 
-Noch sind die Programme zur Motorsteuerung (Abb. \ref{fig:programm-motorsteuerung}) und Signalerfassung (Abb. \ref{fig:programm-signalerfassung}) getrennt. Weil das Ziel ist, während der Bewegung das Signal aufzunehmen, müssen beide Programme zusammengeführt werden. Das Problem dabei ist, dass die \verb|step| Funktion den Rest des Programms blockiert, solange der Motor läuft. Um dieses Problem zu lösen, wird die Schiene in Intervallen abgefahren, welche von Messungen unterbrochen werden. Wir wählen wieder eine willkürliche Zahl an Intervallen, beispielsweise 20, und fügen sie den Konstanten des Programms zur Motorsteuerung hinzu.
+Noch sind die Programme zur Motorsteuerung (Abb. \ref{fig:programm-motorsteuerung}) und Signalerfassung (Abb. \ref{fig:programm-signalerfassung}) getrennt. Weil das Ziel ist, während der Bewegung das Signal aufzunehmen, müssen beide Programme zusammengeführt werden. Das Problem dabei ist, dass die \verb|step| Funktion den Rest des Programms blockiert, solange der Motor läuft. Um dieses Problem zu lösen, wird die Schiene in Intervallen abgefahren, welche von Messungen unterbrochen werden. Wir wählen wieder einen willkürlichen Intervall, beispielsweise \SI{1}{\milli\metre}, und fügen sie den Konstanten des Programms zur Motorsteuerung hinzu.
 \begin{figure}[ht]
 \begin{lstlisting}[language=C++]
-const int interval = 20
+const int interval = 1
 \end{lstlisting}
 \label{fig:constant-interval}
 \end{figure}
+
+\noindent Als nächstes müssen die Motorschritte pro Intervall mit folgender Formel berechnet werden.
+\[
+    \text{stepsPerInterval} = \frac{\text{interval}}{\text{rangePerRev}} \cdot \text{stepsPerRev}
+\]
