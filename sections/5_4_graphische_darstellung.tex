@@ -2,11 +2,28 @@
 
 Führen wir das Programm aus Abb. \ref{fig:programm-signalerfassung-und-motorsteuerung} aus, erwarten wir eine Ausgabe von Werten in folgender Art:
 \begin{lstlisting}
-1,1542
-2,1244
-3,1242
-4,3244
+1    1542
+2    1244
+3    1242
+4    3244
 ...
 \end{lstlisting} % TODO real data
 
 Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphisch darstellen.
+
+\begin{figure}[ht]
+\begin{lstlisting}[language=TeX]
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=0, xmax=150,
+        ymin=0, ymax=1023,
+    ]
+
+    \addplot[color=blue] table {
+        1    1542
+        2    1244
+        % ...
+    }
+\end{tikzpicture}
+\end{lstlisting}
+\end{figure}
