@@ -18,12 +18,12 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
         xmin=0, xmax=150,
         ymin=0, ymax=1023,
     ]
-
-    \addplot[color=blue] table {
-        1    0
-        2    20
-        % ...
-    }
+        \addplot table {
+            1    0
+            2    20
+            % etc ...
+        }
+    \end{axis}
 \end{tikzpicture}
 \end{lstlisting}
     \end{subfigure}
