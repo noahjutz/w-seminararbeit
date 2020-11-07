@@ -6,12 +6,12 @@ Führen wir das Programm aus Abb. \ref{fig:programm-signalerfassung-und-motorste
 2    20
 3    80
 ...
-\end{lstlisting} % TODO real data
+\end{lstlisting}
+Die linken Werte sind die Messlängen von \SI{0}{\milli\metre} bis \SI{5}{\milli\metre}, die rechten die aufgenommene elektrische Spannung von \SI{0}{\volt} bis \SI{5}{\volt}, linear auf einen Zahlenbereich von 0-1023 übertragen.
 
-Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphisch darstellen.
+Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphisch darstellen. Es müssen nur die Tab-Seperierten Werte in ein \verb|tikzpicture| eingefügt werden. Das resultat des Programms in Abb. \ref{fig:latex-visualisierung} lässt sich in Abb. \ref{fig:ergebnisse-erwartetes-signal} sehen.
 
 \begin{figure}[ht]
-    \begin{subfigure}[b]{0.5\textwidth}
 \begin{lstlisting}[language=TeX]
 \begin{tikzpicture}
     \begin{axis}[
@@ -26,24 +26,6 @@ Die soeben erfassten Daten lassen sich mithilfe \verb|pgfplots| und \TeX\ graphi
     \end{axis}
 \end{tikzpicture}
 \end{lstlisting}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.5\textwidth}
-        \begin{tikzpicture}
-            \begin{axis}[
-                xlabel={Messlänge [mm]},
-                ylabel={Transmission [Arbiträre Einheit]},
-                xmin=0, xmax=150,
-                ymin=0, ymax=1023,
-                width=\textwidth,
-                height=\textwidth
-            ]
-            \end{axis}
-            \begin{scope}[x={185},y={185}]
-                \draw (0,0) .. controls (0.15,0.25) .. (0.3,0);
-                \draw (0.3,0) .. controls (0.45,0.75) .. (0.6,0);
-                \draw (0.6,0) .. controls (0.75,0.25) .. (0.9,0);
-            \end{scope}
-        \end{tikzpicture}
-    \end{subfigure}
     \caption{Graphische Darstellung der Werte mit \TeX}
+    \label{fig:latex-visualisierung}
 \end{figure}

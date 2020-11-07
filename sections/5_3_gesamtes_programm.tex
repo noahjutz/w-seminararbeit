@@ -19,13 +19,13 @@ const int interval = 1
     \text{intervalAmount} = \frac{\text{range}}{\text{interval}}
 \]
 
-Mit den obigen Werten \verb|interval|, \verb|stepsPerInterval| und \verb|intervalAmount| können wir nun das gesamte Programm schreiben. Mit einem for-loop soll das Programm durch die Gesamtmenge an Intervallen \verb|intervalAmount| iterieren, und dabei sowohl den Motor um die Anzahl der Schritte pro Intervall \verb|stepsPerInterval| bewegen, als auch das Signal erfassen. Zusätzlich geben wir die Position des Sensors neben der Messung in CSV (Comma-Seperated-Values) Form an.
+Mit den obigen Werten \verb|interval|, \verb|stepsPerInterval| und \verb|intervalAmount| können wir nun das gesamte Programm schreiben. Mit einem for-loop soll das Programm durch die Gesamtmenge an Intervallen \verb|intervalAmount| iterieren, und dabei sowohl den Motor um die Anzahl der Schritte pro Intervall \verb|stepsPerInterval| bewegen, als auch das Signal erfassen. Zusätzlich geben wir die Position des Sensors neben der Messung, mit einem Tab seperiert, an.
 
 \begin{figure}[ht]
 \begin{lstlisting}[language=C++]
 for (int i = 0; i < intervalAmount; i++) {
     stepper.step(stepsPerInterval)
-    Serial.println(String(i * measurementInterval) + "," + String(analogRead(A0)))
+    Serial.println(String(i * measurementInterval) + "  " + String(analogRead(A0)))
 }
 \end{lstlisting}
 \caption{Verbundenes Programm zur Signalerfassung und Motorsteuerung}
