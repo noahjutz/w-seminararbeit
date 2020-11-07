@@ -1,6 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 
-Um das Signal des Sensors aufzunehmen und über den Arduino an den angeschlossenen PC weiterzuleiten, verwenden wir die \verb|Serial| API der Arduino Programmiersprache. Wir setzen die Datenrate der seriellen Übertragung arbiträr auf 9600, weil es für unsere Messungen ausreichen wird. Stecken wir einen Sensor mit einer Ausgabe von 0-5V auf Pin A0 ein, können wir das Signal folgendermaßen messen:
+Um das Signal des Sensors aufzunehmen und über den Arduino an den angeschlossenen PC weiterzuleiten, verwenden wir die \verb|Serial| API der Arduino Programmiersprache. Wir setzen die Datenrate der seriellen Übertragung arbiträr auf 9600, weil es für unsere Messungen ausreichen wird. Stecken wir einen Sensor mit einer Ausgabe von 0-5V auf Pin A0 ein, können wir das Signal folgendermaßen messen: Der Output erscheint am Bildschirm des angeschlossenen PCs (Abb. \ref{fig:platformio-signal-simple}).
 \begin{figure}[ht]
 \begin{lstlisting}
 Serial.begin(9600);
@@ -9,11 +9,4 @@ Serial.println(String(analogRead(A0)))
 \caption{Programm zur Signalerfassung}
 \label{fig:programm-signalerfassung}
 \end{figure}
-Der Output erscheint am Bildschirm des angeschlossenen PCs (Abb. \ref{fig:platformio-signal-simple}).
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\textwidth]{example-image}
-    \caption{Ausgabe der Daten in der PlatformIO Entwicklungsumgebung}
-    \label{fig:platformio-signal-simple}
-\end{figure}
