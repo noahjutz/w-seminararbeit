@@ -15,7 +15,7 @@ const int rangePerRev = 20;  // Bewegung pro Umdrehung
 \label{fig:programm-motorsteuerung}
 \end{figure}
 
-Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper Library, welche mit Angabe einer Geschwindigkeit und Schrittanzahl die richtigen Signale an die Motoranschlüsse weitergibt. Die Gesamtanzahl an Schritten berechnet sich folgendermaßen:
+Um den Schrittmotor einfach zu kontrollieren, verwenden wir die Arduino Stepper Library \cite{arduino_stepper_lib}, welche mit Angabe einer Geschwindigkeit und Schrittanzahl die richtigen Signale an die Motoranschlüsse weitergibt. Die Gesamtanzahl an Schritten berechnet sich folgendermaßen:
 
 \[
     \text{steps} = \frac{\text{range}}{\text{rangePerRev}} \cdot \text{stepsPerRev}
